@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:targetSandboxVersion="1"
+    >
+    <!-- Include required permissions for Google Mobile Ads to run. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/group_132"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HaeDab3"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".chatActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HaeDab3.NoActionBar"
+            />
+        <!--
+             You can find your app ID in the AdMob UI. For android:value,
+            insert your own AdMob app ID in quotes, as shown below.
+            Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713
+        -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".CateViewControllerEng"
+            android:exported="false"
+            android:theme="@style/Theme.HaeDab3.NoActionBar"/>
+        <activity
+            android:name=".CateViewController"
+            android:exported="false"
+            android:theme="@style/Theme.HaeDab3.NoActionBar"/>
+        <activity
+            android:name=".EngViewController"
+            android:exported="false"
+            android:theme="@style/Theme.HaeDab3.NoActionBar"/>
+        <activity
+            android:name=".KorViewController"
+            android:exported="false"
+            android:theme="@style/Theme.HaeDab3.NoActionBar"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.HaeDab3.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
